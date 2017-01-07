@@ -1,0 +1,9 @@
+# {{ ansible_managed }}
+#
+# Config file for sSMTP sendmail
+#
+{% for key, value in (ssmtp_conf_defaults | combine(ssmtp_conf)).items() %}
+{% if value %}
+{{ key }}={{ value }}
+{% endif %}
+{% endfor %}

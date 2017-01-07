@@ -1,0 +1,13 @@
+---
+
+ssmtp_conf_defaults:
+    Root: postmaster
+    Mailhub: mail
+    Hostname: "{{ ansible_hostname }}"
+
+# Check available options with `man ssmtp.conf`
+ssmtp_conf: {}
+
+# Aliases
+#   root:your_login@your.domain:mailhub.your.domain[:port]
+ssmtp_revaliases: []

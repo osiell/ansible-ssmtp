@@ -1,0 +1,11 @@
+---
+
+- include: install.yml
+  tags:
+    - ssmtp
+    - ssmtp_install
+
+- include: config.yml
+  tags:
+    - ssmtp
+    - ssmtp_config

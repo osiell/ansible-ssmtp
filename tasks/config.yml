@@ -1,0 +1,13 @@
+---
+
+- name: Configure sSMTP (ssmtp.conf)
+  template:
+    src=ssmtp.conf.j2
+    dest=/etc/ssmtp/ssmtp.conf
+    owner=root group=root mode=0644
+
+- name: Configure sSMTP (revaliases)
+  template:
+    src=revaliases.j2
+    dest=/etc/ssmtp/revaliases
+    owner=root group=root mode=0644
